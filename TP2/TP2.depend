@@ -1,5 +1,12 @@
 # depslib dependency file v1.0
-1556664720 source:c:\users\manu_\desktop\tp2\main.c
+1556746762 source:c:\users\manu_\desktop\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+
+1557508768 source:c:\users\manu_\desktop\utn\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
