@@ -6,10 +6,21 @@
 	<ctype.h>
 	<conio.h>
 
-1557508768 source:c:\users\manu_\desktop\utn\tp2\main.c
+1557628151 source:c:\users\manu_\desktop\utn\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	<conio.h>
+	"function.h"
+
+1557624582 c:\users\manu_\desktop\utn\tp2\function.h
+
+1557628323 source:c:\users\manu_\desktop\utn\tp2\function.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"function.h"
 
