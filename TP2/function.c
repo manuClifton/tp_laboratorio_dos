@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <conio.h>
+
 #include "function.h"
 
 
@@ -261,9 +257,8 @@ void modifyEmployee(eEmployee list[], int len)
     }
 }
 
-
-
-void sortEmployeesUpward(eEmployee list[], int len){
+void sortEmployeesUpward(eEmployee list[], int len)
+{
         eEmployee auxChar;
         system("cls");
         printf(" Legajo      Apellido    Nombre       Sueldo        Sector\n");
@@ -282,13 +277,13 @@ void sortEmployeesUpward(eEmployee list[], int len){
                                list[j] = auxChar;
                             }
                 }
-                printEmployee(list[i]);
             }
-
+            printEmployees(list, len);
             system("pause");
 }
 
-void sortEmployeesDecendent(eEmployee list[], int len){
+void sortEmployeesDecendent(eEmployee list[], int len)
+{
         eEmployee auxChar;
         system("cls");
 
@@ -297,28 +292,27 @@ void sortEmployeesDecendent(eEmployee list[], int len){
 
             for(int i=0; i<len-1; i++){
                 for(int j=i+1; j<len; j++){
-                    if(strcmp(list[i].lastName,list[j].lastName)<0){
+                    if(strcmp(list[i].lastName,list[j].lastName)<0 && list[i].isEmpty == 1){
                         auxChar = list[i];
                         list[i] = list[j];
                         list[j] = auxChar;
                     }
-                    if(strcmp(list[i].lastName,list[j].lastName) == 0 && list[i].sector < list[j].sector){
+                    if(strcmp(list[i].lastName,list[j].lastName) == 0 && list[i].sector < list[j].sector && list[i].isEmpty == 1){
                                auxChar = list[i];
                                list[i] = list[j];
                                list[j] = auxChar;
                             }
                 }
-                printEmployee(list[i]);
             }
-
+            printEmployees(list, len);
             system("pause");
 }
 
 void printEmployee(eEmployee list){
 
-
-    printf("%5d       %7s     %8s     %7.2f         %d\n", list.id, list.lastName, list.name, list.salary, list.sector);
-
+    if(list.isEmpty == 1){
+         printf("%5d       %7s     %8s     %7.2f         %d\n", list.id, list.lastName, list.name, list.salary, list.sector);
+    }
 }
 
 int printEmployees(eEmployee list[], int len){
@@ -367,6 +361,7 @@ void totalEmployees(eEmployee list[], int len)
     average = (float) counterSalary / counterEmployee;
         printf("\nCantidad: %d\n\n", counterEmployee);
         printf("Promedio de sueldos: %.2f\n\n", average);
+
 
 }
 

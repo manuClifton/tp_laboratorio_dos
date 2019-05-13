@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <conio.h>
+
 #include "function.h"
 
 #define SIZEEMP 15
@@ -20,7 +16,6 @@ int main()
 
 //-----------------------LLAMADA DE FUNCIONES-----------/
    //generateEmployee(employee, SIZEEMP);
-    //hardcordSector(sectors, SIZESEC);
     initEmployees(employee, SIZEEMP);
 
     do
@@ -68,13 +63,14 @@ int main()
                 case 2:
                       //printf("Total empleados y promedio de sueldos: ");
                       totalEmployees(employee, SIZEEMP);
+                      system("pause");
                       break;
                 case 3:
                      // printf("Empleados que superan el sueldopromedio: ");
                      employeeExceedsAverage(employee, SIZEEMP);
+                     system("pause");
                       break;
             }
-            system("pause");
             break;
 
         case 7:
